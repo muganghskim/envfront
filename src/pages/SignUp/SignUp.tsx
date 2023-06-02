@@ -2,25 +2,27 @@ import * as React from "react";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from "recoil";
-import { userState } from "../../Recoil/Atoms/user";
+import { userState, isLoggedInState, signup } from "../../Recoil/Atoms/auth";
 
 const SignUp: React.FC = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setFormData] = useState({ username: '', email: '', password: '' });
   const setUser = useSetRecoilState(userState);
+  const setIsLoggedIn = useSetRecoilState(isLoggedInState);
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-    // API 호출하여 회원가입 로직 구현
-    // 예시: signUp({ username, password })
-
-    // API 호출 후 recoil 상태 업데이트
-    setUser({ username });
-
-    // 로그인 페이지로 이동
-    navigate("/");
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    try {
+      const registeredUser = await signup(formData);
+      setUser(registeredUser);
+      setIsLoggedIn(true);
+    } catch (error) {
+      console.error(error); // 이 부분은 에러처리를 원하는 방식으로 변경하실 수 있습니다.
+    }
   };
 
   return (
@@ -30,14 +32,23 @@ const SignUp: React.FC = () => {
         <input
           type="text"
           placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
         />
         <input
           type="password"
           placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
         />
         <button type="submit">Sign Up</button>
       </form>

@@ -1,0 +1,16 @@
+.layout {
+  display: flex;
+  position: absolute;
+  font-size: 20px;
+  top: 60px;
+  right: 80px;
+  color: azure;
+}
+.layout a {
+  display: block;
+  margin: 0 20px;
+}
+.layout .productList {
+  display: block;
+  margin-right: 200px;
+}/*# sourceMappingURL=header.css.map */

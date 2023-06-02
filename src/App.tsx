@@ -1,10 +1,13 @@
 import React from "react";
 import AppRoutes from "./app/AppRoutes";
+import { RecoilRoot } from "recoil";
 
 function App() {
   return (
     <div className="App">
-      <AppRoutes />
+      <RecoilRoot>
+        <AppRoutes />
+      </RecoilRoot>
     </div>
   );
 }
