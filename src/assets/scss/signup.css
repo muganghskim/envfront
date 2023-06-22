@@ -1,0 +1,39 @@
+.SignUp {
+  padding-top: 50px;
+  padding-left: 50px;
+  font-family: "Roboto", sans-serif;
+  width: 300px;
+}
+.SignUp h1 {
+  font-size: 32px;
+  color: #4caf50;
+  padding: 20px;
+}
+.SignUp form {
+  padding: 20px;
+  border-radius: 5px;
+}
+.SignUp form input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #4caf50;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.SignUp form button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.SignUp form button:hover {
+  background-color: #3d8b40;
+}/*# sourceMappingURL=signup.css.map */

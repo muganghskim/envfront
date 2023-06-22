@@ -1,0 +1,49 @@
+$primary-color: #4caf50;   // 친환경 컨셉을 위한 녹색
+$secondary-color: #81c784; // 친환경 컨셉을 위한 연녹색
+
+.SignUp {
+    padding-top: 50px;
+    padding-left: 50px;
+    font-family: 'Roboto', sans-serif;
+    width: 300px;
+    
+    h1 {
+      font-size: 32px;
+      color: $primary-color;
+      padding: 20px;
+    }
+    
+    form {
+
+      padding: 20px;
+      border-radius: 5px;
+  
+      input {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid $primary-color;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+  
+      button {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        background-color: $primary-color;
+        border: none;
+        color: white;
+        border-radius: 3px;
+        margin-top: 20px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+  

@@ -1,8 +1,10 @@
 import * as React from "react";
 import { useState } from "react";
+import Header from "../Header/Header";
 import { useNavigate } from "react-router-dom";
 import { useSetRecoilState } from "recoil";
 import { getAllProducts, getProductById, searchProductsByName, updateProductImage } from "../../Recoil/Atoms/products";
+import '../../assets/scss/products.css';
 
 interface Product {
     id: number;
@@ -57,21 +59,27 @@ const Products: React.FC = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        value={search}
-        placeholder="Search products by name"
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+      <Header textColor={'#4caf50'}></Header>
+      <div className="searchBox">
+        <input
+          type="text"
+          value={search}
+          placeholder="Search products by name"
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
+      <div className="ProductList">
       {products.map((product) => (
-        <div key={product.id} onClick={() => handleProductDetail(product.id)}>
-          <h3>{product.name}</h3>
-          <p>{product.description}</p>
-          <p>{product.price}</p>
+        <div className="product" key={product.id} onClick={() => handleProductDetail(product.id)}>
           <img src={process.env.PUBLIC_URL + product.imageUrl} alt={product.name} style={{ width: '150px', height: '150px' }} ></img>
+          <div className="namepriceBox">
+            <h3>{product.name}</h3>
+            <p>{product.price}</p>
+          </div>
         </div>
       ))}
+      </div>
     </div>
   );
 };

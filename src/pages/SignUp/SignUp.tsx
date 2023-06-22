@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from "recoil";
 import { userState, isLoggedInState, signup } from "../../Recoil/Atoms/auth";
+import '../../assets/scss/signup.css';
+import Header from "../Header/Header";
 
 const SignUp: React.FC = () => {
   const [formData, setFormData] = useState({ username: '', email: '', password: '' });
@@ -26,8 +28,9 @@ const SignUp: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Sign Up</h1>
+    <div className="SignUp">
+      <Header textColor={'#4caf50'}></Header>
+      <h1>회원가입</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

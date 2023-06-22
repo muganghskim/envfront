@@ -1,0 +1,60 @@
+.Login {
+  padding-top: 50px;
+  padding-left: 50px;
+  font-family: "Roboto", sans-serif;
+}
+.Login h3 {
+  font-size: 22px;
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+.Login .memberBox {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+.Login .memberBox .loginBox,
+.Login .memberBox .signupBox {
+  width: 50%;
+  padding: 20px;
+  border-radius: 5px;
+}
+.Login .memberBox .loginBox input,
+.Login .memberBox .signupBox input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #4caf50;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.Login .memberBox .loginBox button,
+.Login .memberBox .signupBox button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.Login .memberBox .loginBox button:hover,
+.Login .memberBox .signupBox button:hover {
+  background-color: #3d8b40;
+}
+.Login .memberBox .signupBox {
+  text-align: center;
+}
+.Login .memberBox .signupBox a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #4caf50;
+  cursor: pointer;
+}
+.Login .memberBox .signupBox a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=login.css.map */

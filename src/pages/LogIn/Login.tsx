@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useSetRecoilState } from "recoil";
 import { userState, isLoggedInState, login } from "../../Recoil/Atoms/auth";
+import '../../assets/scss/login.css';
 
 const Login: React.FC = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
@@ -35,7 +36,7 @@ const Login: React.FC = () => {
 
   return (
     <div className="Login">
-      <Header textColor={'black'}></Header>
+      <Header textColor={'#4caf50'}></Header>
       <div className="memberBox">
         <div className="loginBox">
             <h3>로그인을 해주세요</h3>

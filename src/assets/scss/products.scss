@@ -1,0 +1,83 @@
+$primary-color: #4caf50;   // 친환경 컨셉을 위한 녹색
+$secondary-color: #81c784; // 친환경 컨셉을 위한 연녹색
+.searchBox{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    margin-top: 80px;
+
+    font-family: 'Roboto', sans-serif;
+    input {
+      display: block;
+      width: 100%;
+      max-width: 40%;
+      margin-top: 8px;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid $primary-color;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    
+    button {
+      display: inline-block;
+      padding: 8px;
+      margin-left: 15px;
+      font-size: 16px;
+      background-color: $primary-color;
+      border: none;
+      color: white;
+      box-sizing: border-box;
+      border-radius: 3px;
+      cursor: pointer;
+    
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+}
+
+.ProductList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+    font-family: 'Roboto', sans-serif;
+  
+   
+    flex: 1 0 30%; // 30%로 설정하여 화면에서 6개의 상품이 나타날 수 있도록 함
+    .product {
+      max-width: 30%;
+      background-color: $secondary-color;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      .namepriceBox{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+          h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #fff;
+          }
+          
+          p {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #fff;
+          }
+      }
+  
+      img {
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+      }
+    }
+  }
+  
