@@ -14,8 +14,9 @@ export const userState = atom<User>({
 
 export const isLoggedInState = atom<boolean>({
   key: "isLoggedIn",
-  default: false,
+  default: localStorage.getItem("token") ? true : false,
 });
+
 
 export const login = async (formData: { email: string; password: string }) => {
   const response = await axios.post("http://211.238.138.197:8080/auth/login", formData);
@@ -25,6 +26,8 @@ export const login = async (formData: { email: string; password: string }) => {
 
   return { username, email, token };
 };
+
+
 
 export const signup = async (formData: {
   username: string;

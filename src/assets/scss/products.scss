@@ -50,7 +50,7 @@ $secondary-color: #81c784; // 친환경 컨셉을 위한 연녹색
     flex: 1 0 30%; // 30%로 설정하여 화면에서 6개의 상품이 나타날 수 있도록 함
     .product {
       max-width: 30%;
-      background-color: $secondary-color;
+      // background-color: $secondary-color;
       padding: 20px;
       margin: 10px;
       border-radius: 5px;
@@ -63,13 +63,13 @@ $secondary-color: #81c784; // 친환경 컨셉을 위한 연녹색
           h3 {
             font-size: 16px;
             margin-bottom: 5px;
-            color: #fff;
+            color: #000;
           }
           
           p {
             font-size: 16px;
             margin-bottom: 5px;
-            color: #fff;
+            color: #000;
           }
       }
   
