@@ -86,7 +86,7 @@ export const enroll = async (data: EnrollData) => {
     });
     const {name: resName, description: resDescription, price: resPrice, imageUrl} = response.data;
   
-    return { name: resName, description: resDescription, price: resPrice, imageUrl };
-  };
+  return { name: resName, description: resDescription, price: resPrice, imageUrl };
+};
   
   
